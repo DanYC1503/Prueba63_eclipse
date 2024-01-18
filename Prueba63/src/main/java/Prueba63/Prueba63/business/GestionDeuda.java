@@ -75,6 +75,8 @@ public class GestionDeuda {
 		
 		
 		
+		
+		
 		DetalleDeuda det2 = new DetalleDeuda();
 		det2.setNombre("Mes Enero");
 		det2.setPrecio(6.50);
@@ -89,6 +91,8 @@ public class GestionDeuda {
 		
 		
 		daoDeuda.insert(deuda2);
+		
+		
 		/*System.out.println("\n------------- Usuarios");
 		List<Usuario> list = daoUsuario.getAll();
 		for (Usuario cli: list) {
@@ -97,6 +101,28 @@ public class GestionDeuda {
 		System.out.println("\n------------- Deudas Number 2");
 		List<Deuda> list2 = daoDeuda.getAll();
 		for (Deuda fac: list2) {
+			System.out.println(fac);
+		}
+		
+		
+		Deuda deuda3 = new Deuda();
+		deuda3.setCedula("1752773521");
+		deuda3.setNumero("003-003-00000003");
+		deuda3.setFechaEmision(new Date());
+		deuda3.setTotal(90.50);
+		deuda3.setTitulo("Servicio Medico");
+		
+		DetalleDeuda det3 = new DetalleDeuda();
+		det3.setNombre("Mes Enero");
+		det3.setPrecio(6.50);
+		
+		deuda3.addDetalle(det3);
+		
+		daoDeuda.insert(deuda3);
+		
+		System.out.println("\n------------- Deudas Number 3");
+		List<Deuda> list3 = daoDeuda.getAll();
+		for (Deuda fac: list3) {
 			System.out.println(fac);
 		}
 		
